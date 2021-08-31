@@ -7,9 +7,10 @@ import ProTip from '../src/ProTip';
 import Link from '../src/Link';
 import Copyright from '../src/Copyright';
 
-export default function About() {
+export default function About({slug}) {
   return (
     <Container maxWidth="sm">
+      <Typography>{slug}</Typography>
       <Box my={4}>
         <Typography variant="h4" component="h1" gutterBottom>
           Next.js example
@@ -23,3 +24,35 @@ export default function About() {
     </Container>
   );
 }
+
+export const getStaticPaths = async () => {
+  const listings = ['1', '2', '3', '4' ,'5']
+
+  await new Promise(res => setTimeout(res, 5000))
+
+  return {
+    fallback: true,
+    paths: listings.map((slug) => ({
+      params: {
+        slug,
+      },
+    })),
+  };
+};
+
+export const getStaticProps = async (ctx) => {
+  try {
+    const slug = ctx.params.slug;
+
+    return {
+      revalidate: 10000,
+      props: {
+        slug
+      },
+    };
+  } catch (error) {
+    return {
+      notFound: true,
+    };
+  }
+};
