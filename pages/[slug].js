@@ -7,7 +7,7 @@ import ProTip from '../src/ProTip';
 import Link from '../src/Link';
 import Copyright from '../src/Copyright';
 
-export default function About({slug}) {
+export default function About({ slug }) {
   return (
     <Container maxWidth="sm">
       <Typography>{slug}</Typography>
@@ -15,7 +15,13 @@ export default function About({slug}) {
         <Typography variant="h4" component="h1" gutterBottom>
           Next.js example
         </Typography>
-        <Button variant="contained" color="primary" component={Link} naked href="/">
+        <Button
+          variant="contained"
+          color="primary"
+          component={Link}
+          naked
+          href="/"
+        >
           Go to the main page
         </Button>
         <ProTip />
@@ -26,9 +32,9 @@ export default function About({slug}) {
 }
 
 export const getStaticPaths = async () => {
-  const listings = ['1', '2', '3', '4' ,'5']
+  const listings = ['1', '2', '3', '4', '5'];
 
-  await new Promise(res => setTimeout(res, 5000))
+  await new Promise((res) => setTimeout(res, 5000));
 
   return {
     fallback: true,
@@ -44,10 +50,12 @@ export const getStaticProps = async (ctx) => {
   try {
     const slug = ctx.params.slug;
 
+    await new Promise((res) => setTimeout(res, 5000));
+
     return {
       revalidate: 10000,
       props: {
-        slug
+        slug,
       },
     };
   } catch (error) {
