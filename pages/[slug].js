@@ -40,7 +40,7 @@ export const getStaticPaths = async () => {
     fallback: true,
     paths: listings.map((slug) => ({
       params: {
-        slug,
+        slug: slug.toString(),
       },
     })),
   };
