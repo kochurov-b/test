@@ -55,7 +55,7 @@ export const getStaticProps = async (ctx) => {
     return {
       revalidate: 10000,
       props: {
-        slug,
+        slug: slug.toString(),
       },
     };
   } catch (error) {
