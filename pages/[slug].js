@@ -32,7 +32,7 @@ export default function About({ slug }) {
 }
 
 export const getStaticPaths = async () => {
-  const listings = ['1', '2', '3', '4', '5'];
+  const listings = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
   await new Promise((res) => setTimeout(res, 5000));
 
