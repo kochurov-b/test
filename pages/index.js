@@ -16,12 +16,12 @@ export default function Index() {
         height: '300vh',
       }}
     >
-      <Head>
+      <NextHead>
         <meta
           name="viewport"
           content="width=device-width, viewport-fit=cover"
         />
-      </Head>
+      </NextHead>
       <Container maxWidth="sm">
         <Box my={4}>
           <Typography variant="h4" component="h1" gutterBottom>
