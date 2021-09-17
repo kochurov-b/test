@@ -28,6 +28,7 @@ export default function Index() {
           bottom: 0,
           left: 0,
           width: '100%',
+          marginBottom: 'env(safe-area-inset-bottom)',
         }}
         onClick={() => alert('Click')}
       >
