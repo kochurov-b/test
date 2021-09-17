@@ -1,4 +1,5 @@
 import React from 'react';
+import NextHead from 'next/head';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
@@ -15,6 +16,12 @@ export default function Index() {
         height: '300vh',
       }}
     >
+      <Head>
+        <meta
+          name="viewport"
+          content="width=device-width, viewport-fit=cover"
+        />
+      </Head>
       <Container maxWidth="sm">
         <Box my={4}>
           <Typography variant="h4" component="h1" gutterBottom>
@@ -34,7 +41,7 @@ export default function Index() {
             bottom: 0,
             left: 0,
             width: '100%',
-            paddingBottom: 'calc(2 * env(safe-area-inset-bottom))',
+            marginBottom: 'env(safe-area-inset-bottom)',
           }}
           onClick={() => alert('Click')}
         >
