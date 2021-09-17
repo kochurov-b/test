@@ -19,7 +19,7 @@ export default function Index() {
       <NextHead>
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=0"
         />
       </NextHead>
       <Container maxWidth="sm">
@@ -33,20 +33,24 @@ export default function Index() {
           <ProTip />
           <Copyright />
         </Box>
-        <Button
-          variant="contained"
-          color="primary"
+        <div
           style={{
             position: 'fixed',
             bottom: 0,
             left: 0,
             width: '100%',
-            marginBottom: 'env(safe-area-inset-bottom)',
+            paddingBottom: 'env(safe-area-inset-bottom)',
           }}
-          onClick={() => alert('Click')}
         >
-          Click
-        </Button>
+          <Button
+            fullWidth
+            variant="contained"
+            color="primary"
+            onClick={() => alert('Click')}
+          >
+            Click
+          </Button>
+        </div>
       </Container>
     </div>
   );
