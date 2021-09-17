@@ -33,24 +33,21 @@ export default function Index() {
           <ProTip />
           <Copyright />
         </Box>
-        <div
+
+        <Button
+          variant="contained"
+          color="primary"
           style={{
             position: 'fixed',
             bottom: 0,
             left: 0,
             width: '100%',
-            paddingBottom: 'env(safe-area-inset-bottom)',
+            transform: 'translate3d(0,0,0)',
           }}
+          onClick={() => alert('Click')}
         >
-          <Button
-            fullWidth
-            variant="contained"
-            color="primary"
-            onClick={() => alert('Click')}
-          >
-            Click
-          </Button>
-        </div>
+          Click
+        </Button>
       </Container>
     </div>
   );
