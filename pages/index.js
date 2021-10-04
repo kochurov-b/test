@@ -42,6 +42,7 @@ export default function Index() {
             right: 0,
             height: 50,
             backgroundColor: '#333',
+            marginBottom: 'env(safe-area-inset-bottom)',
           }}
         >
           <a
