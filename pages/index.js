@@ -34,7 +34,30 @@ export default function Index() {
           <Copyright />
         </Box>
 
-        <Button
+        <div
+          style={{
+            position: 'fixed',
+            bottom: 0,
+            left: 0,
+            right: 0,
+            height: 50,
+            backgroundColor: '#333',
+          }}
+        >
+          <a
+            href="https://www.google.com"
+            style={{
+              fontSize: 20,
+              lineHeight: '50px',
+              color: 'white',
+              textAlign: 'center',
+              display: 'block',
+            }}
+          >
+            Download Our App <span>👉</span>
+          </a>
+        </div>
+        {/* <Button
           variant="contained"
           color="primary"
           style={{
@@ -47,7 +70,7 @@ export default function Index() {
           onClick={() => alert('Click')}
         >
           Click
-        </Button>
+        </Button> */}
       </Container>
     </div>
   );
