@@ -42,7 +42,7 @@ export default function Index() {
             right: 0,
             height: 50,
             backgroundColor: '#333',
-            paddingBottom: 'env(safe-area-inset-bottom)',
+            paddingBottom: 'calc(2 * env(safe-area-inset-bottom))',
           }}
         >
           <a
